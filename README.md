@@ -11,7 +11,8 @@ GitHub Pages serves these files exactly as they are.
 | `publications.html` | Papers (newest first) and patent applications |
 | `projects.html` | Showcase cards for the proteomics notebooks |
 | `styles.css` | One stylesheet shared by every page — colors/fonts live at the top |
-| `images/headshot.jpg` | **Add this yourself.** Square-ish, ≥ 600×600 px, < 500 KB |
+| `images/headshot.jpg` | Home page photo. Square-ish, ≥ 600×600 px, < 500 KB |
+| `images/social-preview.png` | 1280×640 card shown when a page is shared (LinkedIn, Slack, texts) |
 | `CNAME` | One line telling GitHub Pages which domain this site answers to |
 
 ## Preview locally
@@ -43,7 +44,7 @@ Delete the default parking records (the `CNAME www → parkingpage.namecheap.com
 | A Record | `@` | `185.199.109.153` |
 | A Record | `@` | `185.199.110.153` |
 | A Record | `@` | `185.199.111.153` |
-| CNAME Record | `www` | `YOUR-GITHUB-USERNAME.github.io.` |
+| CNAME Record | `www` | `acioffi3-spec.github.io.` |
 
 DNS can take up to 24 h to propagate. Then back in **Settings → Pages**, tick **Enforce HTTPS**
 (it may be greyed out until the certificate is issued).
@@ -56,6 +57,8 @@ Check DNS from a terminal: `dig cioffiscientific.com +noall +answer` (macOS/Linu
 - **New paper:** copy a `<li class="pub">…</li>` block in `publications.html`, paste at the top, edit.
 - **Notebook goes live:** in `projects.html`, change `In progress` to `Live`, add `live` to the
   status class, and uncomment/replace the notebook link.
+- **Portfolio repo goes public:** in `projects.html`, un-comment the hidden "View the repository" button and set its URL.
 - **Change colors:** edit `--accent` and `--accent-2` at the top of `styles.css`.
+- **Wording:** the site uses "mass spectrometry-driven" throughout; keep new copy consistent.
 
 Commit and push; GitHub Pages republishes within a minute or two.
