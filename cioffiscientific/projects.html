@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     projects.html — showcase for the proteomics Python portfolio
+     Each notebook is one <article class="card">. When a notebook is
+     pushed to GitHub: change its status to "live", and replace the
+     placeholder links with the real GitHub and nbviewer URLs.
+     Tip: nbviewer.org renders notebooks (plots included) more reliably
+     than GitHub's own preview: https://nbviewer.org/github/USER/REPO/blob/main/notebooks/FILE.ipynb
+     ===================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Alexander G. Cioffi, Ph.D.</title>
+  <meta name="description" content="Reproducible Python analyses of public DIA proteomics data: QC, normalization, and differential abundance calibrated against known ground truth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Cioffi <span>Scientific</span></a>
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <p class="eyebrow">Analysis portfolio</p>
+        <h1>Proteomics data analysis in Python</h1>
+        <p class="lede">
+          A reproducible, end-to-end analysis of public DIA proteomics data — built to show how
+          I evaluate data quality, choose normalization, and set statistical thresholds before
+          trusting a result. Every step is scored against datasets where the right answer is known.
+        </p>
+        <div class="button-row">
+          <!-- Replace with your repo URL -->
+          <a class="button primary" href="https://github.com/YOUR-GITHUB/YOUR-REPO">View the repository on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">Dataset A</p>
+        <h2>Benchmarking a DIA pipeline against known truth</h2>
+        <p>
+          Hybrid-proteome LFQ benchmark (Van Puyvelde et al., <em>Sci Data</em> 2022; PRIDE
+          <a href="https://www.ebi.ac.uk/pride/archive/projects/PXD028735">PXD028735</a>),
+          timsTOF Pro diaPASEF, processed with DIA-NN. Human, yeast, and <em>E. coli</em> digests
+          are mixed at defined ratios, so the true log<sub>2</sub> fold changes are known
+          (human 0, yeast +1, <em>E. coli</em> −2) — every QC, normalization, and statistics
+          choice can be graded, not just asserted.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="status">In progress</div>
+            <h3>01 · Import &amp; QC</h3>
+            <p>Identification depth, Q-value checks, missingness, CVs, retention-time and
+               ion-mobility stability, injection-order drift on QC pools, correlation and PCA.</p>
+            <!-- <a href="NBVIEWER-URL">View notebook →</a> -->
+          </article>
+
+          <article class="card">
+            <div class="status">Planned</div>
+            <h3>02 · Normalization &amp; roll-up</h3>
+            <p>None vs. median vs. quantile vs. DIA-NN's own normalization; MaxLFQ vs. custom
+               protein roll-up — each scored against the expected human log<sub>2</sub>FC of 0.</p>
+          </article>
+
+          <article class="card">
+            <div class="status">Planned</div>
+            <h3>03 · Differential abundance calibration</h3>
+            <p>Welch's t vs. moderated t; technical vs. biological replicate structure; empirical
+               FDR from species truth; ROC curves and fold-change compression.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">Dataset B</p>
+        <h2>Applying the calibrated pipeline to a degrader screen</h2>
+        <p>
+          The thresholds validated on Dataset A will be carried into a public molecular-glue degrader
+          proteomics dataset on the same platform (timsTOF diaPASEF + DIA-NN). <em>Coming soon.</em>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Alexander G. Cioffi · South San Francisco, CA</div>
+  </footer>
+
+</body>
+</html>
