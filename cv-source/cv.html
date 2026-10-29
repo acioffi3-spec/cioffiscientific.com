@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     cv-source/cv.html: source for Cioffi_CV.pdf (the "Download CV" file)
+     Edit this file, then re-export it to PDF (US Letter):
+       Chrome > open this file > Print > Save as PDF > Margins: None,
+       "Background graphics" ON. Save over ../Cioffi_CV.pdf.
+     Deliberately left OFF this public file: phone number, street address,
+     and reference names. Give those privately when asked.
+     ===================================================================== -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alexander G. Cioffi, Ph.D. | CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=IBM+Plex+Mono&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-graphite: #16191D; --color-slate: #4A535C; --color-fog: #D9DEE3;
+    --color-cobalt: #1F4FD8;   --color-signal: #FF5A1F;
+    --font-heading: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Instrument Sans", system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  @page { size: Letter; margin: 0.5in 0.55in; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font-body); font-size: 9.3pt; line-height: 1.38; color: var(--color-graphite); }
+  a { color: var(--color-cobalt); text-decoration: none; }
+
+  header { border-bottom: 2px solid var(--color-graphite); padding-bottom: 10pt; margin-bottom: 4pt; }
+  h1 { font-family: var(--font-heading); font-weight: 800; font-stretch: 125%; font-size: 21pt; line-height: 1.05; margin: 0 0 3pt; }
+  .tagline { font-family: var(--font-heading); font-weight: 800; font-stretch: 125%; font-size: 10pt; color: var(--color-slate); margin: 0 0 7pt; }
+  .contact { font-family: var(--font-mono); font-size: 7.8pt; letter-spacing: .03em; color: var(--color-slate); }
+  .contact span + span::before { content: "·"; margin: 0 6pt; }
+
+  h2 { font-family: var(--font-mono); font-weight: 400; font-size: 8pt; letter-spacing: .08em; text-transform: lowercase;
+       color: var(--color-graphite); margin: 11pt 0 5pt; padding-bottom: 3pt; border-bottom: 1px solid var(--color-fog);
+       display: flex; align-items: center; gap: 6pt; break-after: avoid; }
+  h2::before { content: ""; width: 6pt; height: 6pt; background: var(--color-signal); }
+  p { margin: 0; }
+
+  .job { margin: 0 0 7pt; break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; gap: 12pt; align-items: baseline; }
+  .role { font-weight: 500; }
+  .org { color: var(--color-slate); }
+  .when { font-family: var(--font-mono); font-size: 7.8pt; color: var(--color-slate); white-space: nowrap; }
+  ul { margin: 2pt 0 0; padding-left: 13pt; }
+  li { margin-bottom: 1.5pt; }
+  li::marker { color: var(--color-slate); }
+
+  .results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 12pt; }
+  .results div { border-left: 2px solid var(--color-signal); padding-left: 7pt; }
+  .results b { font-weight: 500; display: block; }
+
+  .skills { display: grid; grid-template-columns: 92pt 1fr; gap: 2pt 10pt; }
+  .skills dt { font-family: var(--font-mono); font-size: 7.8pt; color: var(--color-slate); padding-top: 1pt; }
+  .skills dd { margin: 0; }
+
+  ol.refs { margin: 0; padding-left: 15pt; }
+  ol.refs li { margin-bottom: 2.5pt; break-inside: avoid; }
+  .me { font-weight: 500; text-decoration: underline; text-decoration-color: var(--color-fog); }
+  .note { color: var(--color-slate); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Alexander G. Cioffi, Ph.D.</h1>
+  <p class="tagline">Mass spectrometry-driven proteomics for drug discovery</p>
+  <div class="contact">
+    <span>South San Francisco, CA</span>
+    <span><a href="mailto:acioffi3@gmail.com">acioffi3@gmail.com</a></span>
+    <span><a href="https://cioffiscientific.com">cioffiscientific.com</a></span>
+    <span><a href="https://www.linkedin.com/in/alexander-cioffi-22148a72">linkedin.com/in/alexander-cioffi-22148a72</a></span>
+    <span><a href="https://github.com/acioffi3-spec">github.com/acioffi3-spec</a></span>
+  </div>
+</header>
+
+<h2>summary</h2>
+<p>Principal Scientist and founder of Cioffi Scientific with 9+ years advancing covalent and induced-proximity
+drug discovery through mass spectrometry-driven proteomics. Built and deployed critical-path assays across
+multiple therapeutic programs, spanning RapidFire-MS screens, cellular target engagement, and IND-enabling
+clinical sample analysis. Experienced leading direct reports and cross-functional collaborations, with
+publications in <i>Nature</i>, <i>Science</i>, and <i>Cell Chemical Biology</i>.</p>
+
+<h2>selected results</h2>
+<div class="results">
+  <div><b>RapidFire-MS covalent screening</b>Built the high-throughput platform for covalent fragment hit ID; ran screens across 7 diverse targets.</div>
+  <div><b>3 TPD programs to cellular PoC</b>Carried three targeted protein degradation programs through key milestones, including cellular proof of concept.</div>
+  <div><b>Clinical PD biomarkers</b>Optimized sensitivity for p53 Y220C pharmacodynamic biomarkers in patient clinical samples.</div>
+</div>
+
+<h2>experience</h2>
+<div class="job">
+  <div class="job-head"><span><span class="role">Founder</span> <span class="org">· Cioffi Scientific</span></span><span class="when">Oct 2026 – present</span></div>
+  <ul>
+    <li>Consult for small biotech companies on proteomics, chemoproteomics, and TPD assay strategy to advance programs through key milestones.</li>
+    <li>Advise life-science AI teams on improving models for drug discovery.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="job-head"><span><span class="role">Principal Scientist</span> <span class="org">· Vulcan Bio</span></span><span class="when">Mar 2025 – Sep 2026</span></div>
+  <ul>
+    <li>Spearheaded a chemoproteomic cellular target engagement platform (goDig) to drive hit-to-lead decisions across multiple programs.</li>
+    <li>Engineered automated high-throughput cellular assays (BRET, AlphaLISA) to advance induced-proximity programs through key milestones.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="job-head"><span><span class="role">Scientist I → Scientist II → Senior Scientist</span> <span class="org">· Frontier Medicines</span></span><span class="when">Aug 2019 – Feb 2025</span></div>
+  <ul>
+    <li><b style="font-weight:500">Senior Scientist (2024–2025):</b> Conducted IND-enabling studies monitoring p53 Y220C target engagement in patient clinical samples; optimized sensitivity of the PD biomarker assays.</li>
+    <li><b style="font-weight:500">Scientist II (2022–2024):</b> Supervised two direct reports across three targeted protein degradation programs simultaneously, driving them from hit ID through lead generation and cellular proof of concept.</li>
+    <li>Used diverse MS instrumentation (Q-ToF, Orbitrap Lumos/Eclipse, RapidFire) to develop critical-path assays, validate disease models, and inform key project decisions.</li>
+    <li><b style="font-weight:500">Scientist I (2019–2021):</b> Built and led RapidFire-MS high-throughput screening campaigns for covalent fragment hit ID across 7 diverse targets, establishing the platform for future programs.</li>
+  </ul>
+</div>
+<div class="job">
+  <div class="job-head"><span><span class="role">Postdoctoral Researcher</span> <span class="org">· UC Berkeley, Nomura Lab</span></span><span class="when">Sep 2017 – Jul 2019</span></div>
+  <ul><li>Applied chemoproteomic covalent-ligand screening to discover a functional, ligandable cysteine within an intrinsically disordered region of MYC.</li></ul>
+</div>
+<div class="job">
+  <div class="job-head"><span><span class="role">Graduate Researcher</span> <span class="org">· University of Illinois Urbana-Champaign, Burke Lab</span></span><span class="when">Sep 2011 – May 2017</span></div>
+  <ul><li>Guided a team of graduate students discovering small molecules that restore physiology in ion-transporter deficiencies; co-inventor on three patent applications.</li></ul>
+</div>
+
+<h2>education</h2>
+<div class="job">
+  <div class="job-head"><span><span class="role">Ph.D., Biochemistry</span> <span class="org">· University of Illinois Urbana-Champaign · Advisor: Martin D. Burke</span></span><span class="when">Sep 2011 – May 2017</span></div>
+</div>
+<div class="job">
+  <div class="job-head"><span><span class="role">B.S., Chemistry, Summa Cum Laude</span> <span class="org">· Saint Louis University · Advisor: István Z. Kiss</span></span><span class="when">Aug 2007 – May 2011</span></div>
+  <ul><li>First-author paper on electrochemical oscillations of nickel electrodissolution in a microchip flow cell.</li></ul>
+</div>
+
+<h2>skills</h2>
+<dl class="skills">
+  <dt>proteomics</dt><dd>Chemoproteomics, cellular target engagement, DIA / DDA / PRM, targeted protein degradation, covalent drug discovery, clinical sample analysis</dd>
+  <dt>instruments</dt><dd>Orbitrap Lumos/Eclipse, Q-ToF, RapidFire-MS</dd>
+  <dt>software</dt><dd>Skyline, DIA-NN, Proteome Discoverer, MaxQuant, Biopharma Finder, BioConfirm, Masspike; Python (pandas, NumPy, SciPy, matplotlib) and R</dd>
+  <dt>cell-based assays</dt><dd>BRET, AlphaLISA, automated high-throughput formats</dd>
+</dl>
+
+<h2>publications <span style="margin-left:auto;color:var(--color-slate)">references available upon request</span></h2>
+<ol class="refs">
+  <li>McMahon EJ, <span class="me">Cioffi AG</span>, Visperas PR, Lin Y, Shaghafi M, Daczkowski CM, Hermann JC, Everley RA, Neve RM, Erlanson DA, Webster KR, Narayan V, Wang W. Structural basis for DCAF2 as a novel E3 ligase for PROTAC-mediated targeted protein degradation. <i>Structure</i> 2025, 33, 2020–2028.e7.</li>
+  <li>Boike L*, <span class="me">Cioffi AG*</span>, Majewski FC, Co J, Henning NJ, Jones MD, Liu G, McKenna JM, Tallarico JA, Schirle M, Nomura DK. Discovery of a functional covalent ligand targeting an intrinsically disordered cysteine within MYC. <i>Cell Chem. Biol.</i> 2021, 28, 4–13.e17. <span class="note">*Co-first authors.</span></li>
+  <li>Muraglia KA, Chorghade RS, Kim BR, Tang XX, Shah VS, Grillo AS, Daniels PN, <span class="me">Cioffi AG</span>, Karp PH, Zhu L, Welsh MJ, Burke MD. Small-molecule ion channels increase host defences in cystic fibrosis airway epithelia. <i>Nature</i> 2019, 567, 405–408.</li>
+  <li>Della Ripa LA, Petros ZA, <span class="me">Cioffi AG</span>, Piehl DW, Courtney JM, Burke MD, Rienstra CM. Solid-state NMR of highly <sup>13</sup>C-enriched cholesterol in lipid bilayers. <i>Methods</i> 2018, 138–139, 47–53.</li>
+  <li>Grillo AS, SantaMaria AM, Kafina MD, <span class="me">Cioffi AG</span>, Huston NC, Han M, Seo YA, Yien YY, Nardone C, Menon AV, Fan J, Svoboda DC, Anderson JB, Hong JD, Nicolau BG, Subedi K, Gewirth AA, Wessling-Resnick M, Kim J, Paw BH, Burke MD. Restored iron transport by a small molecule promotes absorption and hemoglobinization in animals. <i>Science</i> 2017, 356, 608–616.</li>
+  <li>Endo MM, <span class="me">Cioffi AG</span>, Burke MD. Our path to less toxic amphotericins. <i>Synlett</i> 2016, 27, 337–354.</li>
+  <li>Davis SA, Della Ripa LA, Hu L, <span class="me">Cioffi AG</span>, Pogorelov TV, Rienstra CM, Burke MD. C3-OH of amphotericin B plays an important role in ion conductance. <i>J. Am. Chem. Soc.</i> 2015, 137, 15102–15104.</li>
+  <li><span class="me">Cioffi AG</span>, Hou J, Grillo AS, Diaz KA, Burke MD. Restored physiology in protein-deficient yeast by a small molecule channel. <i>J. Am. Chem. Soc.</i> 2015, 137, 10096–10099.</li>
+  <li>Anderson TM, Clay MC, <span class="me">Cioffi AG</span>, Diaz KA, Hisao GS, Tuttle MD, Nieuwkoop AJ, Comellas G, Maryum N, Wang S, Uno BE, Wildeman EL, Gonen T, Rienstra CM, Burke MD. Amphotericin forms an extramembranous and fungicidal sterol sponge. <i>Nat. Chem. Biol.</i> 2014, 10, 400–406.</li>
+  <li><span class="me">Cioffi AG</span>, Martin RS, Kiss IZ. Electrochemical oscillations of nickel electrodissolution in an epoxy-based microchip flow cell. <i>J. Electroanal. Chem.</i> 2011, 659, 92–100.</li>
+</ol>
+
+<h2>patent applications</h2>
+<ol class="refs">
+  <li>Burke MD, Grillo AS, <span class="me">Cioffi AG</span>, SantaMaria AM, Blair D, Blake A. Hinokitiol analogues, methods of preparing and pharmaceutical compositions thereof. PCT/US2019/027314, 2019.</li>
+  <li>Burke MD, Nardone C, Blake A, SantaMaria AM, Grillo AS, <span class="me">Cioffi AG</span>, Lyu Y. Restoration of transmembrane copper transport. PCT/US2019/024340, 2019.</li>
+  <li>Burke MD, <span class="me">Cioffi AG</span>, Diaz KA, Hou J, Grillo AS. Restoring physiology with small molecule mimics of missing proteins. PCT/US2015/058806, 2015.</li>
+</ol>
+
+
+</body>
+</html>
