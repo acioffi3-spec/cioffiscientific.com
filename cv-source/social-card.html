@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- Source for images/social-preview.png (1280x640, "Signal and Steel").
+     Re-export: open in Chrome at a 1280x640 window and screenshot,
+     or ask Claude to re-render it. Everything important stays inside
+     the 80px safe border GitHub recommends. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=IBM+Plex+Mono&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --graphite:#16191D; --slate:#4A535C; --fog:#D9DEE3; --paper:#F4F6F8; --ice:#A9C4FF; --signal:#FF5A1F;
+          --font-heading:"Archivo",Arial,sans-serif; --font-body:"Instrument Sans",system-ui,sans-serif; --font-mono:"IBM Plex Mono",monospace; }
+  html, body { margin:0; }
+  body { width:1280px; height:640px; background:var(--graphite); color:var(--paper); position:relative; overflow:hidden; font-family:var(--font-body); }
+  .rule { position:absolute; left:0; right:0; top:0; height:6px; background:var(--signal); width:180px; }
+  .frame { position:absolute; inset:80px 96px; border-top:1px solid var(--slate); border-bottom:1px solid var(--slate); }
+  .text { position:absolute; left:104px; top:118px; width:720px; }
+  .eyebrow { font:400 21px var(--font-mono); letter-spacing:.07em; color:var(--signal); }
+  h1 { font-family:var(--font-heading); font-weight:800; font-stretch:125%; font-size:58px; line-height:1.06; margin:22px 0 22px; letter-spacing:-.01em; }
+  .sub { font-family:var(--font-heading); font-weight:800; font-stretch:125%; font-size:25px; line-height:1.3; color:var(--fog); margin:0; }
+  .areas { margin-top:36px; font:400 18px var(--font-mono); letter-spacing:.05em; color:var(--fog); }
+  .areas span { color:var(--slate); padding:0 10px; }
+  .url { position:absolute; left:104px; bottom:100px; font:400 20px var(--font-mono); letter-spacing:.05em; color:var(--ice); }
+  svg { position:absolute; right:104px; top:150px; }
+  .tick { font:400 14px var(--font-mono); fill:var(--fog); }
+  .ann  { font:400 15px var(--font-mono); fill:var(--paper); }
+</style>
+</head>
+<body>
+  <div class="frame"></div>
+  <div class="text">
+    <div class="eyebrow">// cioffi scientific</div>
+    <h1>Alexander G. Cioffi, Ph.D.</h1>
+    <p class="sub">Mass spectrometry-driven proteomics<br>for drug discovery</p>
+    <div class="areas">chemoproteomics<span>/</span>target engagement<span>/</span>TPD</div>
+  </div>
+  <div class="url">cioffiscientific.com</div>
+
+  <!-- Isotope envelope of a ~1.5 kDa peptide, [M+2H]2+. Relative heights from an
+       averagine (C67 H105 N18 O20 S1) convolution; peaks spaced 1.00336/2 m/z. -->
+  <svg width="290" height="330" viewBox="0 0 290 330" id="spec"></svg>
+<script>
+  const rel=[1.000,0.818,0.416,0.158,0.048], mono=751.0073, step=1.00336/2;
+  const svg=document.getElementById('spec'), NS='http://www.w3.org/2000/svg';
+  const x0=24, xw=236, base=262, h=196, lo=mono-0.35, hi=mono+4*step+0.35;
+  const X=mz=>x0+(mz-lo)/(hi-lo)*xw;
+  const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);svg.appendChild(e);return e;};
+  el('line',{x1:x0-10,x2:x0+xw+10,y1:base,y2:base,stroke:'#4A535C','stroke-width':1.5});
+  rel.forEach((r,i)=>{const x=X(mono+i*step);el('line',{x1:x,x2:x,y1:base,y2:base-r*h,stroke:i===0?'#FF5A1F':'#A9C4FF','stroke-width':4});});
+  [751.0,752.0,753.0].forEach(v=>{const x=X(v);el('line',{x1:x,x2:x,y1:base,y2:base+7,stroke:'#4A535C','stroke-width':1.5});
+    el('text',{x,y:base+28,'text-anchor':'middle',class:'tick'}).textContent=v.toFixed(1);});
+  el('text',{x:x0+xw+10,y:base+52,'text-anchor':'end',class:'tick'}).textContent='m/z';
+  const t=el('text',{x:X(mono)+12,y:base-h-2,class:'ann'}); t.innerHTML='[M+2H]<tspan baseline-shift="super" font-size="11">2+</tspan>';
+</script>
+</body>
+</html>

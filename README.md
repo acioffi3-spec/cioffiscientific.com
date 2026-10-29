@@ -7,13 +7,27 @@ GitHub Pages serves these files exactly as they are.
 
 | File | What it is |
 |---|---|
-| `index.html` | Home page: photo, intro, expertise, career timeline, contact |
+| `index.html` | Home page: hero, track record, consulting services, expertise, career timeline, contact |
 | `publications.html` | Papers (newest first) and patent applications |
 | `projects.html` | Showcase cards for the proteomics notebooks |
-| `styles.css` | One stylesheet shared by every page — colors/fonts live at the top |
+| `styles.css` | One stylesheet shared by every page. All colors and fonts are tokens at the top |
+| `Cioffi_CV.pdf` | The "Download CV" file (2 pages, US Letter) |
+| `cv-source/cv.html` | Source for the CV PDF. Edit this, then re-export (instructions at top of file) |
+| `cv-source/social-card.html` | Source for `images/social-preview.png` |
 | `images/headshot.jpg` | Home page photo. Square-ish, ≥ 600×600 px, < 500 KB |
 | `images/social-preview.png` | 1280×640 card shown when a page is shared (LinkedIn, Slack, texts) |
 | `CNAME` | One line telling GitHub Pages which domain this site answers to |
+
+## Design system: "Signal and Steel"
+
+- **Palette:** Graphite `#16191D`, Slate `#4A535C`, Fog `#D9DEE3`, Paper `#F4F6F8`,
+  Cobalt `#1F4FD8`, Ice `#A9C4FF`, Signal `#FF5A1F`, Ember `#FFD9C9`. Roughly 80% grey, 15% blue, 5% orange.
+- **Fonts:** Archivo 800 at 125% width (headings), Instrument Sans 400/500 (body), IBM Plex Mono (labels, dates, tags).
+- **Rules:** one Signal-orange button per screen, with Graphite text. Other buttons are outlined.
+  Header, hero and footer are dark in both themes. Tags use Ember with Graphite text. Corners are 4px (buttons, tags) or 8px (cards).
+- **Contrast:** Signal text fails WCAG AA on Paper (2.9:1), so on light sections the eyebrow text
+  is Graphite and a small Signal square carries the accent. On dark sections the eyebrow text is Signal (5.7:1).
+- **Dark mode:** follows the visitor's OS setting automatically (`prefers-color-scheme`).
 
 ## Preview locally
 

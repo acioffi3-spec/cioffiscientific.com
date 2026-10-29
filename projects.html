@@ -23,27 +23,28 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=IBM+Plex+Mono&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="site-header">
+  <header class="site-header theme-dark">
     <div class="container">
-      <a class="brand" href="index.html">Cioffi <span>Scientific</span></a>
-      <nav class="nav">
-        <a href="index.html">About</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html" aria-current="page">Projects</a>
-        <a href="index.html#contact">Contact</a>
+      <a class="brand" href="index.html">Cioffi Scientific</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">// about</a>
+        <a href="index.html#consulting">// consulting</a>
+        <a href="publications.html">// publications</a>
+        <a href="projects.html" aria-current="page">// projects</a>
+        <a href="index.html#contact">// contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section>
+    <section class="hero theme-dark">
       <div class="container">
-        <p class="eyebrow">Analysis portfolio</p>
+        <p class="eyebrow">// analysis portfolio</p>
         <h1>Proteomics data analysis in Python</h1>
         <p class="lede">
           A reproducible, end-to-end analysis of public DIA proteomics data — built to show how
@@ -61,7 +62,7 @@
 
     <section>
       <div class="container">
-        <p class="eyebrow">Dataset A</p>
+        <p class="eyebrow">// dataset a</p>
         <h2>Benchmarking a DIA pipeline against known truth</h2>
         <p>
           Hybrid-proteome LFQ benchmark (Van Puyvelde et al., <em>Sci Data</em> 2022; PRIDE
@@ -74,7 +75,7 @@
 
         <div class="cards">
           <article class="card">
-            <div class="status">In progress</div>
+            <span class="badge">in progress</span>
             <h3>01 · Import &amp; QC</h3>
             <p>Identification depth, Q-value checks, missingness, CVs, retention-time and
                ion-mobility stability, injection-order drift on QC pools, correlation and PCA.</p>
@@ -82,14 +83,14 @@
           </article>
 
           <article class="card">
-            <div class="status">Planned</div>
+            <span class="badge">planned</span>
             <h3>02 · Normalization &amp; roll-up</h3>
             <p>None vs. median vs. quantile vs. DIA-NN's own normalization; MaxLFQ vs. custom
                protein roll-up — each scored against the expected human log<sub>2</sub>FC of 0.</p>
           </article>
 
           <article class="card">
-            <div class="status">Planned</div>
+            <span class="badge">planned</span>
             <h3>03 · Differential abundance calibration</h3>
             <p>Welch's t vs. moderated t; technical vs. biological replicate structure; empirical
                FDR from species truth; ROC curves and fold-change compression.</p>
@@ -100,7 +101,7 @@
 
     <section>
       <div class="container">
-        <p class="eyebrow">Dataset B</p>
+        <p class="eyebrow">// dataset b</p>
         <h2>Applying the calibrated pipeline to a degrader screen</h2>
         <p>
           The thresholds validated on Dataset A will be carried into a public molecular-glue degrader
@@ -110,8 +111,11 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">© 2026 Alexander G. Cioffi · South San Francisco, CA</div>
+  <footer class="site-footer theme-dark">
+    <div class="container mono">
+      <span>© 2026 Cioffi Scientific · Alexander G. Cioffi, Ph.D.</span>
+      <span>South San Francisco, CA</span>
+    </div>
   </footer>
 
 </body>
