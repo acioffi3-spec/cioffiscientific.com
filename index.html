@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     index.html — the home page (what visitors see at cioffiscientific.com)
+     GitHub Pages serves a file named index.html automatically for "/".
+     Sections: header/nav · hero (photo + intro) · expertise · career · footer
+     ===================================================================== -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Makes the layout scale correctly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alexander G. Cioffi, Ph.D. | Proteomics &amp; Drug Discovery</title>
+  <!-- This description is what Google shows under your link in search results -->
+  <meta name="description" content="Alexander G. Cioffi, Ph.D. — Principal Scientist in mass spectrometry-based proteomics, chemoproteomics, and covalent / induced-proximity drug discovery.">
+
+  <!-- Fonts from Google Fonts: a serif for headings, a clean sans for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+
+  <!-- The shared stylesheet (all pages use it) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Header / navigation (copy-identical on every page) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Cioffi <span>Scientific</span></a>
+      <nav class="nav">
+        <a href="index.html" aria-current="page">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero: photo + who you are ===== -->
+    <section>
+      <div class="container hero">
+        <div>
+          <!-- PHOTO: save a square-ish photo as images/headshot.jpg.
+               If the file is missing, "onerror" hides the broken image and
+               shows the initials circle instead. -->
+          <img class="headshot" src="images/headshot.jpg" alt="Portrait of Alexander Cioffi"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="headshot-placeholder" aria-hidden="true">AC</div>
+        </div>
+
+        <div>
+          <p class="eyebrow">Principal Scientist · Mass Spectrometry · Drug Discovery</p>
+          <h1>Alexander G. Cioffi, Ph.D.</h1>
+          <p class="lede">
+            I use mass spectrometry-based proteomics to answer the questions that move drug
+            programs forward. I have over 9 years of experience building, optimizing, and deploying
+            critical-path assays across covalent and induced-proximity programs, from
+            high-throughput RapidFire-MS screens to IND-enabling analysis of clinical samples.
+          </p>
+          <div class="button-row">
+            <a class="button primary" href="projects.html">See the analysis portfolio</a>
+            <a class="button" href="publications.html">Publications</a>
+            <!-- Optional: put your CV PDF in the repo and uncomment this line
+            <a class="button" href="Cioffi_CV.pdf">Download CV</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Expertise ===== -->
+    <section>
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">What I do</p>
+          <h2>Expertise</h2>
+          <p>
+            My work sits where chemical biology meets analytical rigor: designing proteomics
+            experiments that produce decision-quality data, and leading the people and
+            cross-functional collaborations that act on it.
+          </p>
+          <div class="tags">
+            <span class="tag">Chemoproteomics</span>
+            <span class="tag">Cellular target engagement</span>
+            <span class="tag">Targeted protein degradation</span>
+            <span class="tag">Covalent drug discovery</span>
+            <span class="tag">DIA / DDA / PRM</span>
+            <span class="tag">RapidFire-MS HTS</span>
+            <span class="tag">Clinical sample analysis</span>
+            <span class="tag">Python/R data analysis</span>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Toolkit</p>
+          <h2>Platforms &amp; software</h2>
+          <p><strong>Instruments:</strong> Orbitrap Lumos/Eclipse, Q-ToF, RapidFire-MS</p>
+          <p><strong>Software:</strong> Skyline, DIA-NN, Proteome Discoverer, MaxQuant, Biopharma Finder,
+             BioConfirm, Masspike, Python (pandas, NumPy, SciPy, matplotlib), and R</p>
+          <p><strong>Cell-based assays:</strong> BRET, AlphaLISA, automated high-throughput formats</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Career timeline ===== -->
+    <section>
+      <div class="container">
+        <p class="eyebrow">Career</p>
+        <h2>Experience</h2>
+        <ul class="timeline">
+          <li>
+            <div class="when">2025 – 2026</div>
+            <div class="role">Principal Scientist, Vulcan Bio</div>
+            <p>Led a chemoproteomic cellular target-engagement platform (goDig) to drive
+               hit-to-lead decisions across multiple programs; built automated high-throughput
+               cellular assays (BRET, AlphaLISA) for induced-proximity programs.</p>
+          </li>
+          <li>
+            <div class="when">2019 – 2025</div>
+            <div class="role">Scientist I → Senior Scientist, Frontier Medicines</div>
+            <p>Established the RapidFire-MS screening platform for hit ID; supervised two direct
+               reports across three targeted protein degradation projects from hit ID through lead
+               generation; ran IND-enabling studies measuring p53 Y220C target engagement in
+               patient clinical samples.</p>
+          </li>
+          <li>
+            <div class="when">2017 – 2019</div>
+            <div class="role">Postdoctoral Researcher, UC Berkeley (Nomura Lab)</div>
+            <p>Applied chemoproteomic covalent-ligand screening to discover a functional
+               ligandable cysteine within an intrinsically disordered region of MYC.</p>
+          </li>
+          <li>
+            <div class="when">2011 – 2017</div>
+            <div class="role">Ph.D., Biochemistry, University of Illinois Urbana-Champaign (Burke Lab)</div>
+            <p>Small molecules that restore physiology in ion-transporter deficiencies
+               ("molecular prosthetics"); work published in <em>Nature</em>, <em>Science</em>,
+               <em>JACS</em>, and <em>Nature Chemical Biology</em>; co-inventor on three patent
+               applications.</p>
+          </li>
+          <li>
+            <div class="when">2007 – 2011</div>
+            <div class="role">B.S., Chemistry, Saint Louis University — Summa Cum Laude</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <div class="container">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:acioffi3@gmail.com">acioffi3@gmail.com</a><br>
+          <!-- Replace the two URLs below with your real profiles -->
+          LinkedIn: <a href="https://www.linkedin.com/in/alexander-cioffi-22148a72">linkedin.com/in/AlexCioffi</a><br>
+          GitHub: <a href="https://github.com/acioffi3-spec">github.com/AlexCioffi</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Alexander G. Cioffi · South San Francisco, CA</div>
+  </footer>
+
+</body>
+</html>
