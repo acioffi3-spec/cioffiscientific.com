@@ -13,9 +13,10 @@ GitHub Pages serves these files exactly as they are.
 | `styles.css` | One stylesheet shared by every page. All colors and fonts are tokens at the top |
 | `Cioffi_CV.pdf` | The "Download CV" file (2 pages, US Letter) |
 | `cv-source/cv.html` | Source for the CV PDF. Edit this, then re-export (instructions at top of file) |
-| `cv-source/social-card.html` | Source for `images/social-preview.png` |
+| `cv-source/social-card.html` | Source for both card images (add `#og` to the URL for the link-preview shape) |
 | `images/headshot.jpg` | Home page photo. Square-ish, ≥ 600×600 px, < 500 KB |
-| `images/social-preview.png` | 1280×640 card shown when a page is shared (LinkedIn, Slack, texts) |
+| `images/social-preview.png` | 2560×1280 (2:1) card for GitHub repo Settings → Social preview |
+| `images/og-image.png` | 2560×1340 (1.91:1) card shown when a page is shared (LinkedIn, Slack, texts) |
 | `CNAME` | One line telling GitHub Pages which domain this site answers to |
 
 ## Design system: "Signal and Steel"
