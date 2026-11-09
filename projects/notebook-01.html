@@ -8753,6 +8753,9 @@ Precursor.Quantity: 0 missing, 0 zero or negative values
     <span class="n">per_run</span> <span class="o">=</span> <span class="n">kept</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"run"</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">genes_kept</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">kept</span><span class="p">[</span><span class="s2">"Genes"</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">())</span>
     <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"rule"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+                 <span class="c1"># runs with ANY data left: a strict per-run rule can empty whole runs,</span>
+                 <span class="c1"># and a median over the surviving runs would hide that</span>
+                 <span class="s2">"runs with data"</span><span class="p">:</span> <span class="n">kept</span><span class="p">[</span><span class="s2">"run"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
                  <span class="s2">"protein groups"</span><span class="p">:</span> <span class="n">kept</span><span class="p">[</span><span class="s2">"Protein.Group"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
                  <span class="s2">"median PG / run"</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">per_run</span><span class="p">[</span><span class="s2">"Protein.Group"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">median</span><span class="p">()),</span>
                  <span class="s2">"median precursors / run"</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">per_run</span><span class="p">[</span><span class="s2">"Precursor.Id"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">median</span><span class="p">()),</span>
@@ -8788,6 +8791,7 @@ Precursor.Quantity: 0 missing, 0 zero or negative values
 <thead>
 <tr style="text-align: right;">
 <th></th>
+<th>runs with data</th>
 <th>protein groups</th>
 <th>median PG / run</th>
 <th>median precursors / run</th>
@@ -8809,11 +8813,13 @@ Precursor.Quantity: 0 missing, 0 zero or negative values
 <th></th>
 <th></th>
 <th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th>A  as delivered (PG q &lt;= 5% per run)</th>
+<td>209</td>
 <td>313</td>
 <td>278</td>
 <td>3210</td>
@@ -8826,6 +8832,7 @@ Precursor.Quantity: 0 missing, 0 zero or negative values
 </tr>
 <tr>
 <th>B  PG q &lt;= 1% per run</th>
+<td>167</td>
 <td>268</td>
 <td>139</td>
 <td>2829</td>
@@ -8838,6 +8845,7 @@ Precursor.Quantity: 0 missing, 0 zero or negative values
 </tr>
 <tr>
 <th>C  PG q &lt;= 1% in its single best run</th>
+<td>209</td>
 <td>268</td>
 <td>254</td>
 <td>3177</td>
@@ -8850,6 +8858,7 @@ Precursor.Quantity: 0 missing, 0 zero or negative values
 </tr>
 <tr>
 <th>D  PG q &lt;= 1% in &gt;= 25% of runs of one sample type</th>
+<td>209</td>
 <td>184</td>
 <td>180</td>
 <td>3012</td>
@@ -8862,6 +8871,7 @@ Precursor.Quantity: 0 missing, 0 zero or negative values
 </tr>
 <tr>
 <th>E  PG q &lt;= 1% in &gt;= 50% of runs of one sample type</th>
+<td>209</td>
 <td>144</td>
 <td>143</td>
 <td>2886</td>
@@ -8980,7 +8990,7 @@ Precursor.Quantity: 0 missing, 0 zero or negative values
 </tr>
 <tr>
 <td><strong>B</strong></td>
-<td>Halves the protein groups in each run (278 → 139), so missingness is created by thresholding rather than by absence. A protein present in every run would drop in and out, run by run.</td>
+<td><strong>Empties 42 of the 209 runs completely.</strong> With about 180 protein groups per run, the smallest q-value a run can produce is about 1/180 ≈ 0.006, and in 42 runs even the best protein misses 1%. In the surviving runs it halves the protein groups (278 → 139), so missingness is created by thresholding rather than by absence.</td>
 </tr>
 <tr>
 <td><strong>C</strong></td>
