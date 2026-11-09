@@ -417,3 +417,9 @@ a.pub-title:hover { text-decoration-color: var(--link); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Project figure (a real result in place of decoration) and card links */
+.project-figure { margin: 28px 0 24px; }
+.project-figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: #fff; }
+.project-figure figcaption { margin-top: 10px; font-size: 0.8rem; color: var(--text-muted); }
+.card .card-links { margin-top: 14px; }
