@@ -98,6 +98,17 @@
             <p class="card-links"><a href="projects/notebook-02.html">Read the notebook →</a>
                · <a href="https://github.com/acioffi3-spec/dia-proteomics-pipeline/blob/main/notebooks/02_normalization_and_rollup.ipynb">Code on GitHub →</a></p>
           </article>
+
+          <article class="card">
+            <span class="badge">live</span>
+            <h3>03 · Differential abundance, calibrated</h3>
+            <p>Known changes spiked into technical replicates, so every call can be graded. A validated
+               moderated t keeps FDR near 5% and finds 2.5× more true changes than Welch at 3 vs 3;
+               fold-change-only and unadjusted-p shortcuts fail; a calibrated tier for on/off proteins;
+               replicate guidance for study design.</p>
+            <p class="card-links"><a href="projects/notebook-03.html">Read the notebook →</a>
+               · <a href="https://github.com/acioffi3-spec/dia-proteomics-pipeline/blob/main/notebooks/03_differential_abundance_calibration.ipynb">Code on GitHub →</a></p>
+          </article>
         </div>
       </div>
     </section>
@@ -105,21 +116,21 @@
     <section>
       <div class="container">
         <p class="eyebrow">// dataset b</p>
-        <h2>Calibrating differential abundance against known truth</h2>
+        <h2>Validating against a real mixed-proteome benchmark</h2>
         <p>
-          Hybrid-proteome LFQ benchmark (Van Puyvelde et al., <em>Sci Data</em> 2022; PRIDE
-          <a href="https://www.ebi.ac.uk/pride/archive/projects/PXD028735">PXD028735</a>).
-          Human, yeast, and <em>E. coli</em> digests are mixed at defined ratios, so the true
-          log<sub>2</sub> fold changes are known (human 0, yeast +1, <em>E. coli</em> −2), and
-          statistical choices can be graded, not just asserted.
+          Simulated spike-ins cannot reproduce one real-world artefact: interfering peptides in a
+          mixed proteome compress measured ratios toward 1. A hybrid-proteome LFQ benchmark (human,
+          yeast and <em>E. coli</em> digests at defined ratios; Van Puyvelde et al., <em>Sci Data</em> 2022,
+          PRIDE <a href="https://www.ebi.ac.uk/pride/archive/projects/PXD028735">PXD028735</a>)
+          will test the calibrated pipeline where the true fold changes come from the sample itself.
         </p>
 
         <div class="cards">
           <article class="card">
             <span class="badge">planned</span>
-            <h3>03 · Differential abundance calibration</h3>
-            <p>Welch's t vs. moderated t; technical vs. biological replicate structure; empirical
-               FDR from species truth; ROC curves and fold-change compression.</p>
+            <h3>04 · Ratio compression in real mixtures</h3>
+            <p>Apply the Notebook 03 analysis to known species ratios: fold-change compression,
+               empirical FDR, and whether the calibrated thresholds hold.</p>
           </article>
         </div>
       </div>
