@@ -7872,6 +7872,27 @@ a.anchor-link {
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=240e863f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<blockquote>
+<p><strong>Results at a glance</strong> (details in the sections listed)</p>
+<p>| Finding | Decision | § |
+|---|---|---|
+| Our RT-LOWESS normalization reproduces DIA-NN's own (r = 0.9998), but a precursor-specific drift component survives it | RT-dependent normalization is necessary, not sufficient | 3 |
+| QC-anchored drift corrections (including the authors') over-correct samples: serum drifts only 0.83× as fast as the QC | Do not anchor sample correction on the QC alone | 4 |
+| <strong>M7</strong> (RT-LOWESS + sample-anchored per-precursor drift correction, scored out-of-sample) is the only method that removes every run-order component (max |ρ| 0.09), with the lowest sample CVs (10.7% plasma, 10.9% serum) | <strong>Chosen normalization.</strong> Valid only because run order was randomized | 3, 5 |
+| The remaining ~10.8% sample CV splits into ~6.5% injection noise and ~8.5–9% sample-preparation noise | That is the precision floor no normalization can beat | 5 |
+| MaxLFQ that accepts single-precursor ratios reports FGG as "equal" in plasma and serum (a biological error) | <strong>MaxLFQ requiring ≥ 2 shared precursors</strong> → 158 protein groups, protein CV 3.7–4.0% | 6 |
+| Fibrinogen-A stays 5.76–5.85 log2 higher in plasma under every protein filter tested | Conclusions are robust to the filter choice | 7, 8 |</p>
+</blockquote>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2fc0e093">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
