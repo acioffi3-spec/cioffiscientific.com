@@ -102,10 +102,11 @@
           <article class="card">
             <span class="badge">live</span>
             <h3>03 · Differential abundance, calibrated</h3>
-            <p>Known changes spiked into technical replicates, so every call can be graded. A validated
-               moderated t keeps FDR near 5% and finds 2.5× more true changes than Welch at 3 vs 3;
-               fold-change-only and unadjusted-p shortcuts fail; a calibrated tier for on/off proteins;
-               replicate guidance for study design.</p>
+            <p>Known changes spiked into technical replicates, so every call can be graded. A moderated t
+               (verified against limma) keeps FDR near 5% and finds 2.5× more true changes than Welch at
+               3 vs 3. A stress test, normalizing each small experiment on its own runs, exposes FDR
+               inflation from unbalanced changes, fixed by an effect-size filter. Plus a calibrated tier
+               for on/off proteins and replicate guidance for study design.</p>
             <p class="card-links"><a href="projects/notebook-03.html">Read the notebook →</a>
                · <a href="https://github.com/acioffi3-spec/dia-proteomics-pipeline/blob/main/notebooks/03_differential_abundance_calibration.ipynb">Code on GitHub →</a></p>
           </article>

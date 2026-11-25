@@ -7876,6 +7876,27 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ef23812d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<blockquote>
+<p><strong>Results at a glance</strong> (details in the sections listed)</p>
+<p>| Finding | Decision | § |
+|---|---|---|
+| The report already carries DIA-NN's precursor (1%), library (0.5%) and protein-group (5%) filters | Add one global protein filter (rule D: PG q ≤ 1% in ≥ 25% of runs of one matrix) → 184 protein groups; fibrinogen kept, VWF/F5 lost | 2, 5 |
+| Signal drifts down with injection order: the pooled QC loses 41% (−0.76 log2), with a step near injection 200; late-eluting peptides drift most | Normalization must be <strong>retention-time dependent and run-order aware</strong> (Notebook 02) | 9 |
+| Pooled-QC CV is 7.1% over 10 injections but 20.6% over all 39 | Most long-run variance is drift, so it is correctable | 8 |
+| PCA: PC1 (40%) = plasma vs serum, PC2 (34%) = injection order | Drift is the second-largest source of variance, nearly as large as the biology | 11 |
+| Fibrinogen A/B/G are 16–300× higher in plasma than serum; albumin flat | Positive control passes: the data recover known biology | 12 |
+| All failing runs are serum wells in plate 3, row H (−0.36 log2) | Pre-registered rule (≥ 2 hard flags) excludes 4 runs; the rest of row H is kept and watched | 13 |</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cefd3586">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
